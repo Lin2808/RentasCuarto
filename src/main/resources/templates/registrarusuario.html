@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Registrarse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.18.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/footer.css}" href="/css/footer.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button data-mdb-collapse-init class="navbar-toggler" type="button"
+                    data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15"
+                            alt="MDB Logo" loading="lazy" />
+                    </a>
+                </div>
+                <!-- Collapsible wrapper -->
+
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Avatar -->
+                    <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                        id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                            class="rounded-circle" height="30" alt="Avatar" loading="lazy" />
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="far fa-user"></i> Mi perfil <!-- Ícono de mi perfil -->
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-hotel"></i> Mis reservas <!-- Ícono de cambio de contraseña -->
+                            </a>
+                        </li>
+                        <li>
+                            <form id="logout-form">
+                                <!-- Aquí puedes agregar cualquier otro campo o información que necesites -->
+                                <button class="dropdown-item" type="submit">
+                                    <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+                                    <!-- Ícono de cerrar sesión -->
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+        <!-- Navbar -->
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <div class="container-fluid h-custom mt-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                        class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                    <form>
+                        <!-- Nombres -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="nombres" class="form-control form-control-lg"/>
+                            <label class="form-label" for="nombres" required>Nombres</label>
+                        </div>
+
+                        <!-- Apellidos -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="apellidos" class="form-control form-control-lg"/>
+                            <label class="form-label" for="apellidos" required>Apellidos</label>
+                        </div>
+
+                        <!-- Cédula & Fecha de nacimiento-->
+                        <div class="row">
+                            <spam>Fecha de nacimiento</spam>
+                            <div class="col-md-6">
+                                <input type="date" id="fechaNacimiento" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="cedula" class="form-control" maxlength="10"/>
+                                    <label class="form-label">Cédula</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Correo -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="email" class="form-control form-control-lg"/>
+                            <label class="form-label" for="email" required>Correo electrónico</label>
+                        </div>
+
+                        <!-- Contraseña y Repetir contraseña -->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="password" class="form-control form-control-lg"/>
+                                    <label class="form-label" for="password" required>Contraseña</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="confirmPassword" class="form-control form-control-lg">
+                            <label class="form-label" for="confirmPassword" required>Repetir contraseña</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contraseña y Repetir contraseña -->
+
+                        <div class="text-center mt-4 pt-2">
+                            <button type="submit" class="btn btn-primary btn-lg">Registrarse</button>
+                            <p class="small fw-bold mt-2 pt-1 mb-0">¿Ya tienes cuenta? <a href="#!"
+                                    class="link-danger">Iniciar sesión</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-body-tertiary text-center">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Todos los derechos reservados
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <!-- JS y otros scripts -->
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"
+        th:src="@{https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js}"></script>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+        th:src="@{https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js}"></script>
+
+    <!-- jQuery -->
+    <script th:src="@{https://code.jquery.com/jquery-3.6.0.min.js}"
+        src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- DataTables CSS (Bootstrap) -->
+    <link th:href="@{https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css}" rel="stylesheet"
+        href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
+
+    <!-- DataTables JavaScript -->
+    <script th:src="@{https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js}"
+        src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script th:src="@{https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js}"
+        src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+</body>
+
+</html>
